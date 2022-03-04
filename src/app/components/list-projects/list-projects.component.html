@@ -1,0 +1,16 @@
+<div class="filtroCategorias">
+    <ul>
+        <li (click)="cargarCategoria()">Todos</li>
+        <li (click)="cargarCategoria(categoria)" *ngFor="let categoria of categorias">{{categoria}}</li>
+    </ul>
+</div>
+<div class="list-projects">
+    <div class="proyecto" *ngFor="let proyecto of arrProyectos">
+        <div class="imagen">
+            <img src="https://cdn.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png" alt="">
+        </div>
+        <h2>{{proyecto.titulo}}</h2>
+        <a [routerLink]="['/projects', proyecto._id]">Ver Proyecto</a>
+    </div>
+
+</div>

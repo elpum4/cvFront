@@ -1,0 +1,16 @@
+.proyecto {
+    display: flex;
+    margin: 16px 0;
+    img {
+        width: 200px;
+        height: 100%;
+    }
+    
+    .content {
+        /* Take the remaining width */
+        flex: 1;
+    }
+}
+
+
+
