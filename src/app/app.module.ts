@@ -20,6 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
+import { AboutComponent } from './components/about/about.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -30,6 +33,7 @@ import {FormsModule} from '@angular/forms';
     ContactComponent,
     MainNavComponent,
     ListProjectsComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,9 @@ import {FormsModule} from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatExpansionModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
