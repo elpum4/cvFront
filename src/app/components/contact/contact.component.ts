@@ -36,13 +36,13 @@ export class ContactComponent implements OnInit {
       formData.append("message", this.form.get("message").value);
       this.isLoading = true; // sending the post request async so it's in progress
       this.submitted = false; // hide the response message on multiple submits
-      this.http.post("./contact", formData).subscribe(
+      this.http.post("https://formspree.io/f/xoqrwnyr", formData).subscribe(
         (response) => {
           // choose the response message
           if (response["result"] == "success") {
-            this.responseMessage = "Muchas Gracias por su interés, le estaré enviando mi contacto telefónico para que pueda conocerme mejor!";
-          } else {
             this.responseMessage = "Oops! Ocurrió un error, recarga y vuelve a intentarlo.";
+          } else {
+            this.responseMessage = "Muchas Gracias por su interés, le estaré enviando mi contacto telefónico para que pueda conocerme mejor!";
           }
           this.form.enable(); // re enable the form after a success
           this.submitted = true; // show the response message
@@ -50,7 +50,7 @@ export class ContactComponent implements OnInit {
           console.log(response);
         },
         (error) => {
-          this.responseMessage = "Oops! Ocurrió un error, recarga y vuelve a intentarlo.";
+          this.responseMessage = "Hay un error con la Api, contactate a franckocer@gmail.com";
           this.form.enable(); // re enable the form after a success
           this.submitted = true; // show the response message
           this.isLoading = false; // re enable the submit button
