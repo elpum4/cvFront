@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     padding: 1%;
     .proyecto{
-        flex-basis: 22%;
         padding-left: 8px;
         padding-right: 8px;
         background-color: gray;
@@ -37,7 +36,7 @@
 {
     .list-projects{
         .proyecto{
-          flex-basis: 48%;
+          flex-basis: 98%;
         }    
     }
         
@@ -47,7 +46,17 @@
 {
     .list-projects{
         .proyecto{
-          flex-basis: 31%;
+          flex-basis: 48%;
+        }    
+    }
+        
+}
+
+@media(min-width: 1500px)
+{
+    .list-projects{
+        .proyecto{
+          flex-basis: 22%;
         }    
     }
         
