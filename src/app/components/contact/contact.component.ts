@@ -39,10 +39,10 @@ export class ContactComponent implements OnInit {
       this.http.post("https://formspree.io/f/xoqrwnyr", formData).subscribe(
         (response) => {
           // choose the response message
-          if (response["result"] == "success") {
-            this.responseMessage = "Oops! Ocurrió un error, recarga y vuelve a intentarlo.";
-          } else {
+          if (response["ok"] == true) {
             this.responseMessage = "Muchas Gracias por su interés, le estaré enviando mi contacto telefónico para que pueda conocerme mejor!";
+          } else {
+            this.responseMessage = "Oops! Ocurrió un error, recarga y vuelve a intentarlo.";
           }
           this.form.enable(); // re enable the form after a success
           this.submitted = true; // show the response message
